@@ -1,0 +1,6 @@
+/* Shared css (editor/frontend) */
+@import './shared.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

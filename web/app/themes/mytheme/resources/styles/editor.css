@@ -1,0 +1,16 @@
+/* Shared css (editor/frontend) */
+@import './shared.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Editor ACF instructions to admin */
+#editor.block-editor__container .editor-instruction {
+  @apply text-editor text-gray-500;
+}
+
+/* Force editor image to take the full height */
+#editor.block-editor__container .image {
+  @apply min-h-full;
+}
