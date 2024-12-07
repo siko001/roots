@@ -9,3 +9,7 @@
 .side-padding {
   @apply px-8 md:px-16 xl:px-24;
 }
+
+.slow-transition {
+  @apply duration-300 ease-linear;
+}

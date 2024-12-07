@@ -6,6 +6,7 @@ const config = {
       colors: {
         primary: '#5D5FEF',
         'primary-60': '#A5A6F6',
+        'off-white-1000': '#F9F9F9',
         'off-white-950': '#F4F4F4',
         'off-white-900': '#E4E4E4',
         body: '#ACACAC',
@@ -16,6 +17,7 @@ const config = {
       },
       fontFamily:{
         "barlow": ['Barlow', 'sans-serif'],
+        "inter": ['Inter', 'sans-serif'],
       }
     },
   },
@@ -31,7 +33,7 @@ const config = {
         },
         '.heading2': {
           fontFamily: 'Barlow',
-          fontSize: '3.375rem',
+          fontSize: '2.5rem',
           fontWeight: '500',
           lineHeight: '1.2',
         },
@@ -40,6 +42,18 @@ const config = {
           fontSize: '1.875rem',
           fontWeight: '500',
           lineHeight: '1.2',
+        },
+        '.heading4': {
+          fontFamily: 'Barlow',
+          fontSize: '1.375rem',
+          fontWeight: '400',
+          lineHeight: '1',
+        },
+
+        '.body-text':{
+          fontFamily:"inter",
+          leading: '1.6',
+          color: '#ACACAC',
         },
 
         '.image': {

@@ -1261,6 +1261,11 @@
           "slug": "primary-60"
         },
         {
+          "color": "#f9f9f9",
+          "name": "Off-white-1000",
+          "slug": "off-white-1000"
+        },
+        {
           "color": "#f4f4f4",
           "name": "Off-white-950",
           "slug": "off-white-950"
@@ -1317,6 +1322,11 @@
           "fontFamily": "Barlow,sans-serif",
           "name": "Barlow",
           "slug": "barlow"
+        },
+        {
+          "fontFamily": "Inter,sans-serif",
+          "name": "Inter",
+          "slug": "inter"
         }
       ],
       "fontSizes": [

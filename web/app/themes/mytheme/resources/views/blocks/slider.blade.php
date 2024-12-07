@@ -53,7 +53,7 @@
           <div class="swiper-button-prev pl-4 md:pl-12 xl:pl-20 "></div>
 
           {{-- pagination --}}
-          <div class="swiper-pagination pl-8">Pa</div>
+          <div class="swiper-pagination pl-8"></div>
 
       </div>
   @else

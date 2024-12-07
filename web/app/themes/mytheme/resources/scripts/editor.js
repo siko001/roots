@@ -9,4 +9,6 @@ roots.register.filters('@scripts/filters');
 if (import.meta.webpackHot) import.meta.webpackHot.accept(console.error);
 
 const {default: Slider} = await import('./blocks/slider');
+const {default: FeaturedProductSlider} = await import('./blocks/featuredProductSlider');
 new Slider();
+new FeaturedProductSlider();

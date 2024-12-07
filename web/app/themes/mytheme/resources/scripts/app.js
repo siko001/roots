@@ -5,7 +5,9 @@ import domReady from '@roots/sage/client/dom-ready';
  */
 domReady(async () => {
   const {default: Slider} = await import('./blocks/slider');
+  const {default: FeaturedProductSlider} = await import('./blocks/featuredProductSlider');
   new Slider();
+  new FeaturedProductSlider();
  
 });
 
