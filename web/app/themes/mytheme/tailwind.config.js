@@ -34,7 +34,6 @@ const config = {
           fontWeight: '500',
           lineHeight: '1.2',
         }, 
-        
 
 
         '.heading2': {

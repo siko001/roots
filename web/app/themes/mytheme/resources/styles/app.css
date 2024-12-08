@@ -34,7 +34,7 @@ li.youtube.menu-item {
 }
 
 /* Show mobile icons and hide desktop icons on small screens */
-@media (max-width: 640px) {
+@media (max-width: 1280px) {
   .social-icon.desktop-icon {
     @apply hidden;
   }
@@ -96,8 +96,27 @@ li.youtube.menu-item {
     font-size: 2.188rem;
     line-height: 1.3;
   }
+  .heading2 {
+    font-size: 1.875rem;
+    line-height: 1.3;
+  }
   .heading3 {
     font-size: 1.25rem;
     line-height: 1.2;
   }
+}
+
+/* Inner product Page */
+
+.product-info .product-description span {
+  @apply text-body;
+}
+
+/* Accordion */
+
+.accordion-active {
+  @apply text-primary;
+}
+#overview-accordion-body .overview-description p {
+  @apply text-body max-w-[80ch] 2xl:max-w-[70%];
 }

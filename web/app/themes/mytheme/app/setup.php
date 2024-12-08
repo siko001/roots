@@ -177,3 +177,30 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+
+
+
+// Define rewrite rule for 'products' URL structure
+add_action('init', function () {
+    add_rewrite_rule('^products/product-([0-9]+)/?', 'index.php?product_id=$matches[1]', 'top');
+});
+
+// Register the 'product_id' query variable so WordPress recognizes it
+add_filter('query_vars', function ($vars) {
+    $vars[] = 'product_id';
+    return $vars;
+});
+
+
+add_filter('template_include', function ($template) {
+    // Check if the 'product_id' query variable is set
+    $product_id = get_query_var('product_id');
+
+    if ($product_id) {
+        // If 'product_id' is set, load a custom template for the product page
+        return locate_template('resources/views/single-product.blade.php');
+    }
+
+    return $template; // Otherwise, return the default template
+});

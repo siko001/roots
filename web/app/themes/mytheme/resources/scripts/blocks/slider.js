@@ -6,6 +6,7 @@ import 'swiper/swiper-bundle.css';
 export default function slider() {
   const adminEditor = document.querySelector('#editor.block-editor__container');
   const initSwiper = () => {
+    // Full width slider (Block)
     const swiper = new Swiper('.swiper-container', {
       modules: [Navigation, Pagination],
       watchSlidesProgress: true,
@@ -25,6 +26,7 @@ export default function slider() {
     });
   };
 
+  // if editor delay initSwiper to load after editor
   if (adminEditor) {
     setTimeout(initSwiper, 1000);
   } else {
