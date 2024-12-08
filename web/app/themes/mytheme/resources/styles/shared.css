@@ -15,6 +15,16 @@
   @apply duration-300 ease-linear;
 }
 
+/* Cta Normal */
+.btn {
+  @apply rounded-sm bg-primary p-4  text-white uppercase;
+}
+
+/* Cta Inverted */
+/* .btn-inverted {
+  @apply;
+} */
+
 /* Tailwind variables mediaQuerys */
 @media (max-width: 640px) {
   .heading1 {

@@ -7,6 +7,7 @@
         @endif
     </a>
 
+
     {{-- Primary Nav --}}
     @if (has_nav_menu('primary_navigation'))
         <nav class="nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
@@ -16,8 +17,15 @@
 
     {{-- Call To action  / Mobile Menu --}}
     <div class="flex items-center justify-between gap-32">
+
         {{-- CTA --}}
-        <a href="#contact" class="hidden rounded-sm bg-primary p-4 text-white md:block">Get in Touch</a>
+        @include('components.cta-btn', [
+            'link' => '#contact',
+            'text' => 'Get in Touch',
+            'classes' => 'hidden md:block btn text-center',
+            'openNewTab' => '_self',
+        ])
+
 
         {{-- Burger Menu --}}
         <div id="burger-menu" class="flex w-16 flex-col items-end gap-2 hover:cursor-pointer xl:hidden">
@@ -31,6 +39,5 @@
             <span class="min-h-1 min-w-6 relative top-2 rotate-45 bg-primary"></span>
             <span class="min-h-1 min-w-6 relative bottom-3 -rotate-[43deg] bg-primary"></span>
         </div>
-
     </div>
 </div>

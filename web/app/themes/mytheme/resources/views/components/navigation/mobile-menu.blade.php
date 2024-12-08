@@ -1,11 +1,11 @@
 {{-- Mobile Menu --}}
 
 <div data-open="false" id="mobile-menu"
-    class="invisible absolute left-0 top-0 z-20 mt-36 w-full bg-white pb-16 pt-12 text-black xl:hidden">
-    
+    class="invisible absolute left-0 top-0 z-20 mt-28 w-full bg-white pb-16 pt-12 text-black xl:hidden">
+
     <div class="side-padding flex h-full w-full flex-col items-center justify-center gap-6">
 
-        <div class="flex flex-col items-center gap-6 border-b pb-6">
+        <div class="flex flex-col items-center gap-6 whitespace-nowrap border-b pb-6">
             {{-- Navigation Menu Mobile --}}
             @if (has_nav_menu('primary_navigation'))
                 <nav class="nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">

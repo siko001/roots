@@ -5,7 +5,7 @@ export default function header() {
     const mobileMenu = document.getElementById('mobile-menu');
     const burgerMenu = document.getElementById('burger-menu');
     const closeBtn = document.getElementById('close-mobile-menu');
-    const mobileMenuHeight = mobileMenu.clientHeight + 150;
+  const mobileMenuHeight = mobileMenu.clientHeight + 150;
 
 
     if (mobileMenu && burgerMenu && closeBtn) {

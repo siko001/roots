@@ -35,5 +35,15 @@
     </div>
 
     {{-- All Products Button --}}
-    <div></div>
+    {{-- Cta --}}
+    <div class="flex w-full md:justify-center">
+        @include('components.cta-btn', [
+            'link' => '/products',
+            'text' => 'view all products',
+            'classes' => 'btn  mt-8',
+            'openNewTab' => '_self',
+        ])
+    </div>
+
+
 </div>

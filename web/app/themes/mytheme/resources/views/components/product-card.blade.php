@@ -26,7 +26,6 @@
                 @include('partials.product.price', ['product' => $product])
             </h6>
 
-            {{-- Learn More Btn turn button into compontent (user hero and products) --}}
             @include('partials.product.cta', [
                 'product' => $product,
                 'link' => '/products/product-',
