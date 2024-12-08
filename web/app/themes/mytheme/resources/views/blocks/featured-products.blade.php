@@ -48,7 +48,7 @@
                                 {{ esc_html(str_replace('(Copy)', '', $product['name'])) }}
                             </h3>
                             {{-- Description --}}
-                            <p class="product-description body-text">
+                            <p class="product-description text-body body-text">
                                 {{ html_entity_decode(wp_strip_all_tags($product['description'])) }}
                             </p>
                         </div>

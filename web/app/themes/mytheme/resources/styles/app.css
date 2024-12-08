@@ -4,3 +4,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Social Menu Desktop */
+/* SOcial COntainer */
+.social-nav {
+  @apply flex items-center;
+}
+/* Move the linked by 2 (due to svg)*/
+li.linkedin.menu-item {
+  @apply ml-2;
+}
+/* Move the youtube by 1 (due to svg)*/
+li.youtube.menu-item {
+  @apply ml-1;
+}
+
+/* Svg sizes */
+.social-nav .social-menu-link img {
+  @apply w-5 h-5;
+}
+
+.social-nav-mobile {
+  @apply flex  gap-4;
+}
+
+/* Hide mobile icons by default */
+.social-icon.mobile-icon {
+  @apply hidden;
+}
+
+/* Show mobile icons and hide desktop icons on small screens */
+@media (max-width: 640px) {
+  .social-icon.desktop-icon {
+    @apply hidden;
+  }
+  .social-icon.mobile-icon {
+    @apply inline;
+  }
+}
+
+/* ---------- */
+
+/* Date Before */
+#menu-footer-menu.nav::before {
+  content: '©2023.';
+}
+/* Primary Menu wrapper */
+.nav-primary .menu-header-navigation-container .primary-nav {
+  @apply items-center md:gap-2 lg:gap-4 xl:gap-6 hidden xl:flex;
+}
+
+/* primary menu item */
+.nav-primary .menu-header-navigation-container .primary-nav .menu-item {
+  @apply text-sm xl:text-base font-inter text-[#414141] hover:text-primary slow-transition text-center;
+}
+
+.nav-primary .menu-header-navigation-container .primary-nav-mobile {
+  @apply flex flex-col gap-6 text-center text-xl sm:text-xl;
+}
+
+.nav-primary .menu-header-navigation-container .primary-nav-mobile .menu-item {
+  @apply hover:text-primary slow-transition;
+}
+
+/* ------------ */
+
+/* Footer Menu Desktop*/
+.footer-menu {
+  @apply flex text-sm font-inter;
+}
+
+/* footer container  */
+.footer-menu .menu-footer-menu-container {
+  @apply -mr-0.5;
+}
+
+/* footer wrapper */
+.footer-menu .menu-footer-menu-container .menu-item {
+  @apply inline-block px-2 border-r border-white hover:text-black slow-transition;
+}
+
+/* remove the border from the last item */
+.footer-menu .menu-footer-menu-container .menu-item:last-child {
+  @apply border-r-0;
+}
+
+/*  */
+
+@media (max-width: 640px) {
+  .heading1 {
+    font-size: 2.188rem;
+    line-height: 1.3;
+  }
+  .heading3 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+}

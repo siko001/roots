@@ -1,13 +1,13 @@
 /* This File contains shared styles for admin and frontend */
 /* Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 /* Slider Styles */
 @import './blocks/slider.css';
 
 /* Standard Padding */
 .side-padding {
-  @apply px-8 md:px-16 xl:px-24;
+  @apply px-8 lg:px-16 xl:px-24;
 }
 
 .slow-transition {

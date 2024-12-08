@@ -10,6 +10,12 @@
   --swiper-pagination-bullet-vertical-gap: 16px;
 }
 
+@media screen and (max-width: 640px) {
+  :root {
+    --swiper-navigation-size: 24px !important;
+  }
+}
+
 .swiper-container {
   @apply max-h-screen min-h-screen  sm:max-h-[45.75rem] sm:min-h-[45.75rem] !important;
 }
@@ -22,5 +28,5 @@
 /* Swiper Navigation */
 .swiper-button-next,
 .swiper-button-prev {
-  @apply text-white top-[52%] hover:stroke-primary-60 hover:fill-primary-60 hover:text-primary-60 duration-200 ease-linear transition-colors !important;
+  @apply text-white top-[40%] md:top-[52%] hover:stroke-primary-60  hover:fill-primary-60 hover:text-primary-60 duration-200 ease-linear transition-colors !important;
 }

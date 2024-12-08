@@ -41,7 +41,7 @@ add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mime
 }, 10, 4);
 
 
-
+// Use the SVG sanitizer to sanitize the uploaded SVG files
 add_filter('wp_handle_upload_prefilter', function ($file) {
     if ($file['type'] === 'image/svg+xml') {
         // Instantiate the sanitizer
@@ -98,6 +98,7 @@ add_action('after_setup_theme', function () {
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
         'social_navigation' => __('Socials Navigation', 'sage'),
+        'footer_navigation' => __('Footer Navigation', 'sage'),
     ]);
 
     /**
@@ -127,6 +128,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#responsive-embedded-content
      */
     add_theme_support('responsive-embeds');
+
+    add_theme_support('custom-header');
 
     /**
      * Enable HTML5 markup support.

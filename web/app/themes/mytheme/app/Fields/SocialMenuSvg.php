@@ -20,7 +20,15 @@ class SocialMenuSvg extends Field {
         $fields
             ->addImage('image_field', [
                 'label' => 'Social Icon',
-                'instructions' => 'only SVG Format Accepted',
+                'instructions' => '<p class="editor-instruction">only SVG Format Accepted</p>',
+                'required' => 1,
+                'return_format' => "array",
+                'preview_size' => 'icon',
+                'mime_types' => 'svg',
+            ])
+            ->addImage('mobile_image_field', [
+                'label' => 'Mobile Social Icon',
+                'instructions' => '<p class="editor-instruction">only SVG Format Accepted<br>Dark SVGs</p>',
                 'required' => 1,
                 'return_format' => "array",
                 'preview_size' => 'icon',

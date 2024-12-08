@@ -1256,6 +1256,11 @@
           "slug": "primary"
         },
         {
+          "color": "#acacac",
+          "name": "Body",
+          "slug": "body"
+        },
+        {
           "color": "#a5a6f6",
           "name": "Primary-60",
           "slug": "primary-60"
@@ -1276,9 +1281,9 @@
           "slug": "off-white-900"
         },
         {
-          "color": "#acacac",
-          "name": "Body",
-          "slug": "body"
+          "color": "#bebebe",
+          "name": "Off-white-600",
+          "slug": "off-white-600"
         }
       ]
     },
@@ -1327,6 +1332,11 @@
           "fontFamily": "Inter,sans-serif",
           "name": "Inter",
           "slug": "inter"
+        },
+        {
+          "fontFamily": "Space Grotesk,sans-serif",
+          "name": "Space Grotesk",
+          "slug": "space-grotesk"
         }
       ],
       "fontSizes": [
