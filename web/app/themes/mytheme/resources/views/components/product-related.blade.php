@@ -10,8 +10,11 @@
 
         {{-- Slider Nav --}}
         <div class="flex justify-between gap-8 md:gap-12">
-            <div class="related-products-prev">Prev</div>
-            <div class="related-products-next">Next</div>
+            {{-- Prev --}}
+            @include('components.slider.prev', ['classes' => 'related-products-prev'])
+
+            {{-- Next --}}
+            @include('components.slider.next', ['classes' => 'related-products-next'])
         </div>
 
     </div>

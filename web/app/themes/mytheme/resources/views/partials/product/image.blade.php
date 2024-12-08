@@ -1,3 +1,5 @@
+{{-- Product Image --}}
+
 @if (isset($product['images']) && !empty($product['images']))
     {{-- Use product images (inner product page) --}}
     @php

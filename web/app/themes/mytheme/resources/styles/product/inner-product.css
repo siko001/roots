@@ -1,0 +1,14 @@
+/* Inner product Page */
+
+/* Product Description */
+.product-info .product-description span {
+  @apply text-body;
+}
+
+/* Additional Info Accordion */
+.accordion-active {
+  @apply text-primary;
+}
+#overview-accordion-body .overview-description p {
+  @apply text-body max-w-[80ch] 2xl:max-w-[70%];
+}

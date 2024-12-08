@@ -1,0 +1,24 @@
+/* Footer Menu Desktop*/
+.footer-menu {
+  @apply flex text-sm font-inter;
+}
+
+/* footer container  */
+.footer-menu .menu-footer-menu-container {
+  @apply -mr-0.5;
+}
+
+/* Date Before (Alternatively get the date dynamically) */
+#menu-footer-menu.nav::before {
+  content: '©2023.';
+}
+
+/* footer wrapper */
+.footer-menu .menu-footer-menu-container .menu-item {
+  @apply inline-block px-2 border-r border-white hover:text-black slow-transition;
+}
+
+/* remove the border from the last item */
+.footer-menu .menu-footer-menu-container .menu-item:last-child {
+  @apply border-r-0;
+}

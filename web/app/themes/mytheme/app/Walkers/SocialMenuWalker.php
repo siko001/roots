@@ -4,6 +4,8 @@ namespace App\Walkers;
 
 use Walker_Nav_Menu;
 
+// Social Menu Walker to display SVG icons instead of text in the menu for mobile and desktop
+
 class SocialMenuWalker extends Walker_Nav_Menu {
     /**
      * Starts the element output.

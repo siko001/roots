@@ -33,7 +33,6 @@ export default function slider() {
     // Related products slider (single product page)
     const relatedSwiper = new Swiper('#related-product-slider', {
       modules: [Navigation],
-
       loop: true,
       slidesPerView: 1.3,
       slidesPerGroup: 1,
@@ -53,10 +52,11 @@ export default function slider() {
       },
     });
   };
+  
 
-    // if editor delay initSwiper to load after editor 
+    // if editor delay initSwiper to load after editor (This is a quick workaround to get the swiper working in the editor (more permanent solution needed))
   if (adminEditor) {
-    setTimeout(initSwiper, 1000);
+    setTimeout(initSwiper, 7000);
   } else {
     initSwiper();
   }

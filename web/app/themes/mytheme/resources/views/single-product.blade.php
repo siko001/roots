@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
     {{-- Show the Inner Product Page --}}
     @if ($product)

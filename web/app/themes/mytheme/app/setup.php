@@ -18,55 +18,6 @@ add_action('wp_enqueue_scripts', function () {
     bundle('app')->enqueue();
 }, 100);
 
-/** 
- * 
- * Accept SVG files in the media uploader
- */
-add_filter('upload_mimes', function ($mimes) {
-    $mimes['svg'] = 'image/svg+xml';
-    return $mimes;
-});
-
-/**
- * Sanitize SVG files during upload.
- * Optional but recommended for security.
- */
-add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mimes) {
-    $ext = pathinfo($filename, PATHINFO_EXTENSION);
-    if ($ext === 'svg') {
-        $data['ext'] = 'svg';
-        $data['type'] = 'image/svg+xml';
-    }
-    return $data;
-}, 10, 4);
-
-
-// Use the SVG sanitizer to sanitize the uploaded SVG files
-add_filter('wp_handle_upload_prefilter', function ($file) {
-    if ($file['type'] === 'image/svg+xml') {
-        // Instantiate the sanitizer
-        $sanitizer = new Sanitizer();
-
-        // Read the raw SVG content
-        $svgContent = file_get_contents($file['tmp_name']);
-
-        // Sanitize the SVG
-        $cleanSVG = $sanitizer->sanitize($svgContent);
-
-        // Replace the content of the uploaded file with the sanitized SVG
-        if ($cleanSVG) {
-            file_put_contents($file['tmp_name'], $cleanSVG);
-        } else {
-            // Handle errors (optional)
-            $file['error'] = 'The uploaded SVG file could not be sanitized.';
-        }
-    }
-
-    return $file;
-});
-
-
-
 
 /**
  * Register the theme assets with the block editor.
@@ -154,28 +105,52 @@ add_action('after_setup_theme', function () {
     add_theme_support('customize-selective-refresh-widgets');
 }, 20);
 
-/**
- * Register the theme sidebars.
- *
- * @return void
+// Added Custom Function Below
+
+/** 
+ * 
+ * Accept SVG files in the media uploader
  */
-add_action('widgets_init', function () {
-    $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>',
-    ];
+add_filter('upload_mimes', function ($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+});
 
-    register_sidebar([
-        'name' => __('Primary', 'sage'),
-        'id' => 'sidebar-primary',
-    ] + $config);
+/**
+ * Sanitize SVG files during upload.
+ */
+add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mimes) {
+    $ext = pathinfo($filename, PATHINFO_EXTENSION);
+    if ($ext === 'svg') {
+        $data['ext'] = 'svg';
+        $data['type'] = 'image/svg+xml';
+    }
+    return $data;
+}, 10, 4);
 
-    register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer',
-    ] + $config);
+
+// Use the SVG sanitizer to sanitize the uploaded SVG files
+add_filter('wp_handle_upload_prefilter', function ($file) {
+    if ($file['type'] === 'image/svg+xml') {
+        // Instantiate the sanitizer
+        $sanitizer = new Sanitizer();
+
+        // Read the raw SVG content
+        $svgContent = file_get_contents($file['tmp_name']);
+
+        // Sanitize the SVG
+        $cleanSVG = $sanitizer->sanitize($svgContent);
+
+        // Replace the content of the uploaded file with the sanitized SVG
+        if ($cleanSVG) {
+            file_put_contents($file['tmp_name'], $cleanSVG);
+        } else {
+            // Handle errors (optional)
+            $file['error'] = 'The uploaded SVG file could not be sanitized.';
+        }
+    }
+
+    return $file;
 });
 
 
@@ -186,6 +161,7 @@ add_action('init', function () {
     add_rewrite_rule('^products/product-([0-9]+)/?', 'index.php?product_id=$matches[1]', 'top');
 });
 
+
 // Register the 'product_id' query variable so WordPress recognizes it
 add_filter('query_vars', function ($vars) {
     $vars[] = 'product_id';
@@ -193,7 +169,9 @@ add_filter('query_vars', function ($vars) {
 });
 
 
+// Load a custom template for the product page
 add_filter('template_include', function ($template) {
+
     // Check if the 'product_id' query variable is set
     $product_id = get_query_var('product_id');
 
@@ -202,5 +180,5 @@ add_filter('template_include', function ($template) {
         return locate_template('resources/views/single-product.blade.php');
     }
 
-    return $template; // Otherwise, return the default template
+    return $template;
 });

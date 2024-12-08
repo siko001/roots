@@ -1,0 +1,39 @@
+/* Social Menu (Desktop) */
+/* SOcial COntainer */
+.social-nav {
+  @apply flex items-center;
+}
+
+/* Move the linked by 2 (due to svg)*/
+li.linkedin.menu-item {
+  @apply ml-2;
+}
+/* Move the youtube by 1 (due to svg)*/
+li.youtube.menu-item {
+  @apply ml-1;
+}
+
+/* Svg sizes */
+.social-nav .social-menu-link img {
+  @apply w-5 h-5;
+}
+
+/* Social Menu Mobile */
+.social-nav-mobile {
+  @apply flex  gap-4;
+}
+
+/* Hide mobile icons by default */
+.social-icon.mobile-icon {
+  @apply hidden;
+}
+
+/* Show mobile icons and hide desktop icons on medium - small screens */
+@media (max-width: 1280px) {
+  .social-icon.desktop-icon {
+    @apply hidden;
+  }
+  .social-icon.mobile-icon {
+    @apply inline;
+  }
+}

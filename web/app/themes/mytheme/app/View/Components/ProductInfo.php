@@ -8,6 +8,7 @@ use Illuminate\View\Component;
 
 class ProductInfo extends Component {
     public  $product;
+
     /**
      * Create a new component instance.
      */

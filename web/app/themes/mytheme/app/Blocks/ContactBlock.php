@@ -39,28 +39,7 @@ class ContactBlock extends Block {
      *
      * @var array
      */
-    public $keywords = [];
-
-    /**
-     * The block post type allow list.
-     *
-     * @var array
-     */
-    public $post_types = [];
-
-    /**
-     * The parent block type allow list.
-     *
-     * @var array
-     */
-    public $parent = [];
-
-    /**
-     * The ancestor block type allow list.
-     *
-     * @var array
-     */
-    public $ancestor = [];
+    public $keywords = ['contact', 'form', '2 column'];
 
     /**
      * The default block mode.
@@ -134,6 +113,5 @@ class ContactBlock extends Block {
      * Assets enqueued when rendering the block.
      */
     public function assets(array $block): void {
-        // You can enqueue assets here, like CSS or JS for your block
     }
 }

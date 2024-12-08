@@ -1,3 +1,5 @@
+{{-- Product Gallery --}}
+
 @php $images = $product['images'] @endphp
 <div class="product-gallery flex gap-4">
     @foreach ($images as $image)

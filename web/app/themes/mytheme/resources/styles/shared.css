@@ -10,6 +10,23 @@
   @apply px-8 lg:px-16 xl:px-24;
 }
 
+/* Basic transition */
 .slow-transition {
   @apply duration-300 ease-linear;
+}
+
+/* Tailwind variables mediaQuerys */
+@media (max-width: 640px) {
+  .heading1 {
+    font-size: 2.188rem;
+    line-height: 1.3;
+  }
+  .heading2 {
+    font-size: 1.875rem;
+    line-height: 1.3;
+  }
+  .heading3 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
 }

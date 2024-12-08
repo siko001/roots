@@ -6,11 +6,10 @@ import domReady from '@roots/sage/client/dom-ready';
 domReady(async () => {
   const {default: Header} = await import('./components/header');
   const {default: Slider} = await import('./blocks/slider');
-  const {default: FeaturedProductSlider} = await import('./blocks/featuredProductSlider');
+  const {default: ProductsSlider} = await import('./components/products-slider');
   new Header();
   new Slider();
-  new FeaturedProductSlider();
- 
+  new ProductsSlider();
 });
 
 /**
